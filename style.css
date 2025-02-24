@@ -1,13 +1,44 @@
+body {
+    background-color: #EDE2D4;
+}
+
 h1 {
     text-align: center;
-    color: black;  
-    font-size: 36px;
-    font-family:"Bebas Neue", serif;
+    color: black;
+    font-family: "Playfair Display SC", serif;
+    font-weight: 600;
+    font-style: normal;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 2px;
+    background: #0F0000;
 }
 
 h2 {
     text-align: center;
-    font-family:"Bebas Neue", serif;
+    font-family: "Playfair Display SC", serif;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: #0F0000;
 }
 
 #container {
@@ -16,32 +47,36 @@ h2 {
 }
 
 #button {
-    color: teal;
-    background-color: rgb(0, 57, 57);
+    color: #0F0000;
+    background-color: #6E1313;
     padding: 20px;
-    border:3px solid teal;
+    border: 3px solid #0F0000;
     border-radius: 15px;
-    font-family:"Bebas Neue", serif;
+    font-family: "Libre Baskerville", serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #main {
-    color: palevioletred;
-    background-color: pink;
+    color: #0F0000;
+    background-color: #6E1313;
     padding: 20px;
     border-radius: 15px;
-    font-family:"Bebas Neue", serif;
-    border:3px solid palevioletred;
+    font-family: "Libre Baskerville", serif;
+    border: 3px solid #0F0000;
+    margin: 20px;
 }
 
 #sidebar {
-    background-color: orchid;
-    color: purple;
+    color: #0F0000;
+    background-color: #6E1313;
     padding: 20px;
     border-radius: 15px;
-    font-family:"Bebas Neue", serif;
-    border:3px solid purple;
+    font-family: "Libre Baskerville", serif;
+    border: 3px solid #0F0000;
+    margin: 20px;
 }
-
 
 .desktop-only {
     width: 200px;
@@ -49,33 +84,32 @@ h2 {
     object-fit: cover;
     border-radius: 10px;
     margin-top: 10px;
+    border: 3px solid #0F0000;
 }
-
 
 @media (max-width: 669px) {
     .desktop-only {
         display: block;
     }
-
-    #container{
+    #container {
         flex-direction: column;
     }
 }
-
 
 @media (min-width: 700px) {
     #container {
         display: flex;
         gap: 40px;
     }
-    
     #main {
         width: 50%;
         margin-right: 20px;
     }
-   
     #sidebar {
         width: 50%;
         margin-left: 20px;
     }
 }
+
+
+
